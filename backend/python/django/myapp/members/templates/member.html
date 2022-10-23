@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello guys! this is from django</h1>
+    <p>Welcome member's page!</p>
+    <ul>
+      {% for x in myMemberData %}
+      <li>{{ x.firstName }}</li>
+      {% endfor %}
+    </ul>
+    <table border="1">
+      {% for x in myMemberData %}
+      <tr>
+        <td>{{x.id }}</td>
+        <td>{{x.firstName }}</td>
+        <td>{{x.lastName }}</td>
+        <td><button><a href="update/{{ x.id }}">edit</a></button></td>
+        <td><button><a href="delete/{{ x.id }}">delete</a></button></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <button><a href="add/">Add member</a></button>
+  </body>
+</html>

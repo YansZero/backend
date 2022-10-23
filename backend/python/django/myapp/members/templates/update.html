@@ -1,0 +1,11 @@
+<h1>Update member</h1>
+
+<form action='updateRecord/{{ memberData.id }}' method='post'>
+  {% csrf_token %} First Name:<br />
+  <input name='firstName' value='{{ memberData.firstName }}' />
+  <br /><br />
+  Last Name:<br />
+  <input name='lastName' value='{{ memberData.lastName }}' />
+  <br /><br />
+  <input type='submit' value='Submit' />
+</form>
